@@ -13,6 +13,13 @@ spring:
   #jpa
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update # Entity DB와 비교 후 수정사항을 반영
+#      ddl-auto: create # DROP 후 CREATE
+#      ddl-auto: create-drop # DROP 후 CREATE 후 DROP, DML을 사용하지 않으면 DROP 되지 않음.
+#      ddl-auto: validate # Entity DB와 비교 후 다르면 예외 발생
+
+
     #jpa format
     properties:
       hibernate:
