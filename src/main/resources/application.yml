@@ -1,0 +1,30 @@
+#server
+server:
+  port: 10000
+
+#jdbc
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: hr
+    password: 1234
+
+  #jpa
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    #jpa format
+    properties:
+      hibernate:
+        format_sql: true
+        show-sql: false
+
+  #log
+  output:
+    ansi:
+      enabled: never
+
+logging:
+  level:
+    com.p6spy: DEBUG
+    com.app.basic.config.p6spy: DEBUG
